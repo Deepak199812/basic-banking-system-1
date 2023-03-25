@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project_4
+  name: project
   labels:
-    app: project_4
+    app: project
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: project_4
+      app: project
   template:
     metadata:
       labels:
-        app: project_4
+        app: project
     spec:
       containers:
-      - name: project_4
-        image: deepak199812/project_4:latest
+      - name: project
+        image: deepak199812/project:latest
         ports:
         - containerPort: 3000
         
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: project_4
+  name: project
 spec:
   selector:
-    app: project_4 
+    app: project
   type: LoadBalancer
   ports:
   - name: TCP
