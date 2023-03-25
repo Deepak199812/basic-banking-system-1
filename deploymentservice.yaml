@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project_4-deployment
+  name: project_4
   labels:
     app: project_4
 spec:
@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: project_4
     spec:
       containers:
-      - name: nodeserver
+      - name: project_4
         image: deepak199812/project_4:latest
         ports:
         - containerPort: 3000
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: project_4-service
+  name: project_4
 spec:
   selector:
     app: project_4 
