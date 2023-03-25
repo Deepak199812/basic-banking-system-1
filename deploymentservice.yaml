@@ -17,6 +17,7 @@ spec:
       containers:
       - name: project
         image: deepak199812/project:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 3000
         
