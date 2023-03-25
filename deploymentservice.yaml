@@ -26,14 +26,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: project-nodejs
+  name: project
 spec:
   selector:
-    app: project-nodejs
+    app: project
   type: LoadBalancer
   ports:
-  - name: TCP
-    port: 5000
-    targetPort: 3000
-    nodePort: 31110
+  - port: 80
+    protocol: TCP
+    nodePort: 30001
+    
+    
+    
    
