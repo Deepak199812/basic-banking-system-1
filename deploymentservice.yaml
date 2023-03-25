@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   name: nodeapp-deployment
   labels:
-    app: nodeapp
+    app: project_4
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: project_4
   template:
     metadata:
       labels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: deepak199812/nodeapp:latest
+        image: deepak199812/project_4:latest
         ports:
         - containerPort: 3000
         
@@ -29,10 +29,11 @@ metadata:
   name: nodeapp-service
 spec:
   selector:
-    app: nodeapp 
+    app: project_4 
   type: LoadBalancer
   ports:
-  - name: http
-    port: 80
-    targetPort: 3001
+  - name: TCP
+    port: 5000
+    targetPort: 3000
+    nodePort: 31110
    
