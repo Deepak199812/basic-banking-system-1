@@ -30,7 +30,7 @@ metadata:
 spec:
   selector:
     app: project
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 3000
     protocol: TCP
