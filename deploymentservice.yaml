@@ -18,7 +18,7 @@ spec:
       - name: project
         image: deepak199812/project:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         
         
 ---
@@ -32,8 +32,8 @@ spec:
     app: project
   type: NodePort
   ports:
-  - port: 3000
-    targetport: 3000
+  - port: 80
+    targetport: 80
     protocol: TCP
     nodePort: 31110
     
